@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int tam(string cadena){
+int tam(char cadena[100]){
     int cont=0;
     while (cadena[cont]!='\0')
         cont++;
