@@ -6,7 +6,7 @@ int tam(char cadena[]){
     int cont=0;
     while (cadena[cont]!='\0')
         cont++;
-    return 0;
+    return cont;
 }
 void conpiarst(char s[10], char t[10], int j, int i){
     if (j<=i)
