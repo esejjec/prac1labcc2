@@ -16,10 +16,33 @@ int tamp(char *a) {
 	q = a;
 	cout<<q<<endl;
 	cout<<a<<endl;
-	while ( *a ) {q++;}
-	return p-q;
+	while ( *a ) {q++;a++;}
+	return q-p;
 }
 
+int longiPun(char *s)
+{
+    int cont = 0;
+    while(*(s+cont)!='\0'){
+        cont++;
+    }
+    return cont;
+}
+
+int longitud(char *s)
+{
+    if(!(*s))
+        return 0;
+
+    return 1 + longitud(s + 1);
+}
+
+int  LongitudCadena(char *str)
+{
+    char *s;
+    for (s = str; *s; ++s);
+    return(s - str);
+}
 int main()
 {
     string cadena;
@@ -31,5 +54,7 @@ int main()
     cout << "Ingresa la cadena: \n";
     cin>>*a;
     cout<<LongitudCadena(a)<<endl;
+    cout<<longiPun(a)<<endl;
+    cout<<longitud(a)<<endl;
     cout<<tamp(a)<<endl;;
 }
